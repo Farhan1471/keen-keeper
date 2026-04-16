@@ -1,18 +1,24 @@
 import React, { useEffect, useState } from "react";
+import useFriendsData from "../../hooks/useFriendsData";
+import { Link } from "react-router";
 
 const FriendsCard = () => {
 
-    const [friends, showFriends] = useState([]);
+    const {friends, loading} = useFriendsData();
 
-    useEffect(() => {
-        const fetchData = async () => {
-            const res = await fetch("/data.json");
-            const data = await res.json();
-            console.log(data);
-            showFriends(data);
-        };
-        fetchData();
-    }, [])
+    // const [friends, showFriends] = useState([]);
+    // const [loading, setLoading] = useState(true);
+
+    // useEffect(() => {
+    //     const fetchData = async () => {
+    //         const res = await fetch("/data.json");
+    //         const data = await res.json();
+    //         console.log(data);
+    //         showFriends(data);
+    //         setLoading(false);
+    //     };
+    //     fetchData();
+    // }, [])
 
     const statusColors = {
         'Overdue': '#EF4444',
@@ -24,12 +30,12 @@ const FriendsCard = () => {
         <div>
             <h3 className="font-semibold text-2xl ml-76">Your Friends</h3>
 
-            <div className="flex justify-center">
+            {loading? <h2>Loading...</h2> : <div className="flex justify-center">
                 <div className="grid grid-cols-1 md:*:grid-cols-2 lg:grid-cols-4 gap-6 mt-6">
                     {
                         friends.map((friend, individual) =>{
                             return(
-                                <div className="">
+                                <Link to={`/friends/${friend.id}`} className="">
                                     <div className="card w-52 bg-base-100 shadow-md">
                                         <div className="card-body text-center">
                                             <img src={friend.picture} alt="" className="w-24 rounded-full mx-auto" />
@@ -45,12 +51,12 @@ const FriendsCard = () => {
                                             <div className="badge mx-auto text-white" style={{backgroundColor: statusColors[friend.status]}}>{friend.status}</div>
                                         </div>
                                     </div>
-                                </div>
+                                </Link>
                             )
                         })
                     }
                 </div>
-            </div>
+            </div>}
         </div>
     )
 }

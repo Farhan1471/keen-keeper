@@ -8,6 +8,8 @@ import Homepage from './pages/homepage/Homepage'
 import Stats from './pages/stats/Stats'
 import Timeline from './pages/timeline/Timeline'
 import NotFoundPage from './pages/notFoundPage/NotFoundPage'
+import FriendDetails from './pages/friendDetails/FriendDetails'
+import CalledFriendProvider from './context/CalledFriendProvider'
 
 const router = createBrowserRouter(
   [
@@ -19,6 +21,10 @@ const router = createBrowserRouter(
           path: "/",
           element: <Homepage />,
           loader: ()=> fetch("/data.json")
+        },
+        {
+          path: "/friends/:id",
+          element: <FriendDetails />
         },
         {
           path: "/stats",
@@ -36,6 +42,8 @@ const router = createBrowserRouter(
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router}/>
+    <CalledFriendProvider>
+      <RouterProvider router={router}/>
+    </CalledFriendProvider>
   </StrictMode>,
 )
