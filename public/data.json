@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "name": "Rahim Ahmed",
+    "picture": "https://randomuser.me/api/portraits/men/32.jpg",
+    "email": "rahim.ahmed@gmail.com",
+    "days_since_contact": 18,
+    "status": "Overdue",
+    "tags": ["school", "close friend"],
+    "bio": "We studied together in high school. Still talks about cricket and old memories.",
+    "goal": 14,
+    "next_due_date": "2026-04-10"
+  },
+  {
+    "id": 2,
+    "name": "Nusrat Jahan",
+    "picture": "https://randomuser.me/api/portraits/women/44.jpg",
+    "email": "nusrat.jahan@gmail.com",
+    "days_since_contact": 10,
+    "status": "Almost Due",
+    "tags": ["university"],
+    "bio": "Worked together on several university assignments. Very helpful and organized.",
+    "goal": 12,
+    "next_due_date": "2026-04-18"
+  },
+  {
+    "id": 3,
+    "name": "Tanvir Hasan",
+    "picture": "https://randomuser.me/api/portraits/men/55.jpg",
+    "email": "tanvir.hasan@gmail.com",
+    "days_since_contact": 5,
+    "status": "On-Track",
+    "tags": ["gaming", "gym"],
+    "bio": "We play online games almost every weekend and share tech ideas.",
+    "goal": 10,
+    "next_due_date": "2026-04-21"
+  },
+  {
+    "id": 4,
+    "name": "Fariha Islam",
+    "picture": "https://randomuser.me/api/portraits/women/29.jpg",
+    "email": "fariha.islam@gmail.com",
+    "days_since_contact": 20,
+    "status": "Overdue",
+    "tags": ["college", "debate club"],
+    "bio": "Met in college debate club. Always has interesting opinions on current topics.",
+    "goal": 15,
+    "next_due_date": "2026-04-08"
+  },
+  {
+    "id": 5,
+    "name": "Sabbir Hossain",
+    "picture": "https://randomuser.me/api/portraits/men/61.jpg",
+    "email": "sabbir.hossain@gmail.com",
+    "days_since_contact": 13,
+    "status": "Almost Due",
+    "tags": ["gym", "fitness"],
+    "bio": "Gym partner who keeps me motivated to stay consistent with workouts.",
+    "goal": 14,
+    "next_due_date": "2026-04-17"
+  },
+  {
+    "id": 6,
+    "name": "Mehedi Karim",
+    "picture": "https://randomuser.me/api/portraits/men/77.jpg",
+    "email": "mehedi.karim@gmail.com",
+    "days_since_contact": 3,
+    "status": "On-Track",
+    "tags": ["startup", "tech"],
+    "bio": "Discuss business ideas and startups. Always shares new tech trends.",
+    "goal": 10,
+    "next_due_date": "2026-04-23"
+  },
+  {
+    "id": 7,
+    "name": "Anika Islam",
+    "picture": "https://randomuser.me/api/portraits/women/68.jpg",
+    "email": "anika.islam@gmail.com",
+    "days_since_contact": 16,
+    "status": "Overdue",
+    "tags": ["family friend"],
+    "bio": "Family friend who recently moved to Dhaka. Planning to catch up soon.",
+    "goal": 12,
+    "next_due_date": "2026-04-11"
+  },
+  {
+    "id": 8,
+    "name": "Rafiul Islam",
+    "picture": "https://randomuser.me/api/portraits/men/85.jpg",
+    "email": "rafiul.islam@gmail.com",
+    "days_since_contact": 7,
+    "status": "On-Track",
+    "tags": ["football", "tech"],
+    "bio": "We play football in the neighborhood ground every Friday evening.",
+    "goal": 10,
+    "next_due_date": "2026-04-20"
+  }
+]
