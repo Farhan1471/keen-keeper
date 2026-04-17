@@ -28,8 +28,8 @@ const FriendsCard = () => {
     }
 
     return(
-        <div>
-            <h3 className="font-semibold text-2xl ml-76">Your Friends</h3>
+        <div className="max-w-6xl mx-auto px-4">
+            <h3 className="font-semibold text-2xl text-center md:text-center lg:text-left lg:ml-28">Your Friends</h3>
 
             {loading? <div className="flex justify-center items-center"><HashLoader color="#244D3F"/></div> : <div className="flex justify-center">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-6">

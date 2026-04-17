@@ -8,7 +8,7 @@ const Homepage = () =>{
         <div>
             <Banner />
             <SummaryCard />
-            <hr className="my-12 h-0.5 border-0 bg-[#E9E9E9] mx-52"/>
+            <hr className="my-12 h-0.5 border-0 bg-[#E9E9E9] mx-4 md:mx-16 lg:mx-72"/>
             <FriendsCard />
         </div>
     )
