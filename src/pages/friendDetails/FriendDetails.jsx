@@ -90,7 +90,7 @@ const FriendDetails = () => {
                     {/* Right Bottom */}
                     <div className="card w-full bg-base-100 border-2 border-[#E9E9E9] p-8">
                             <div className="flex justify-between">
-                                <p>Relationship Goal</p>
+                                <p className="text-[#244D3F] font-medium">Relationship Goal</p>
                                 <button className="btn">Edit</button>
                             </div>
                             <p className="text-[#64748B]">Contact every <span className="font-semibold text-black">{expectedFriend?.goal} days</span></p>

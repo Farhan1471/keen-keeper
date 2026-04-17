@@ -7,7 +7,7 @@ const Footer = () =>{
     return(
         <div className="mt-12">
             <footer className="bg-[#244D3F] text-white text-center">
-                <h1 className="text-center text-5xl font-bold pt-8">KeenKeeper</h1>
+                <p className="text-center text-5xl pt-8 font-medium"><span className="font-bold">Keen</span>Keeper</p>
                 <p className="text-xs my-4 mx-2">Your personal shelf of meaningful connections. Browse, tend, and nurture the relationships that matter most.</p>
                 <p className="font-semibold">Social Links</p>
 
