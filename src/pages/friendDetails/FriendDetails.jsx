@@ -49,7 +49,7 @@ const FriendDetails = () => {
 
                         <p className="font-semibold text-lg">{expectedFriend?.name}</p>
 
-                        <div className="badge mx-auto text-white" style={{backgroundColor: statusColors[expectedFriend?.status]}}>{expectedFriend?.status}</div>
+                        <div className="badge mx-auto text-xs rounded-full text-white" style={{backgroundColor: statusColors[expectedFriend?.status]}}>{expectedFriend?.status}</div>
 
                         <div className="flex flex-wrap justify-center gap-1">
                             {expectedFriend?.tags?.map((tag, index) => (
@@ -99,51 +99,46 @@ const FriendDetails = () => {
             </div>
 
 
-
-
-
-
             <div className="grid grid-cols-1 lg:grid-cols-4 gap-4">
                 <div className="space-y-2">
                     {/* Snooze */}
-                    <div className="card w-full h-8 bg-base-100 mt-2 border-2 border-[#E9E9E9]">
+                    <button className="card w-full h-8 bg-base-100 mt-2 border-2 border-[#E9E9E9] cursor-pointer">
                         <div className="flex items-center justify-center gap-1 py-0.5">
                             <RiNotificationSnoozeLine />
                             <p className="text-center">Snooze 2 Weeks</p>
-                        </div>
-                        
-                    </div>
-                    {/* Snooze */}
-                    <div className="card w-full bg-base-100 mt-2 border-2 border-[#E9E9E9]">
+                        </div>    
+                    </button>
+
+                    {/* Archive */}
+                    <button className="card w-full bg-base-100 mt-2 border-2 border-[#E9E9E9] cursor-pointer">
                         <div className="flex items-center justify-center gap-1 py-0.5">
                             <FiArchive />
                             <p className="text-center">Archive</p>
-                        </div>
-                        
-                    </div>
-                    {/* Snooze */}
-                    <div className="card w-full bg-base-100 mt-2 border-2 border-[#E9E9E9]">
+                        </div>     
+                    </button>
+
+                    {/* Delete */}
+                    <button className="card w-full bg-base-100 mt-2 border-2 border-[#E9E9E9] cursor-pointer">
                         <div className="flex items-center justify-center gap-1 py-0.5 text-[#EF4444]">
                             <RiDeleteBinLine />
                             <p className="text-center">Delete</p>
-                        </div>
-                        
-                    </div>
+                        </div>         
+                    </button>
                 </div>
 
                 
                 <div className="card w-full bg-base-100 mt-2 border-2 border-[#E9E9E9] p-4 lg:col-span-3 ">
                         <p>Quick Check-In</p>
                         <div className="flex justify-between mt-2">
-                            <button onClick={() => handleActionButton('Call')} type="button" className="bg-[#F8FAFC] border-2 border-[#E9E9E9] w-[30%] py-1.5 flex flex-col items-center gap-1 rounded-lg">
+                            <button onClick={() => handleActionButton('Call')} type="button" className="bg-[#F8FAFC] cursor-pointer hover:bg-gray-200 border-2 border-[#E9E9E9] w-[30%] py-1.5 flex flex-col items-center gap-1 rounded-lg">
                                 <FiPhoneCall />
                                 <p>Call</p>
                             </button>
-                            <button onClick={() => handleActionButton('Text')} type="button" className="bg-[#F8FAFC] border-2 border-[#E9E9E9] w-[30%] py-1.5 flex flex-col items-center gap-1 rounded-lg">
+                            <button onClick={() => handleActionButton('Text')} type="button" className="bg-[#F8FAFC] cursor-pointer hover:bg-gray-200 border-2 border-[#E9E9E9] w-[30%] py-1.5 flex flex-col items-center gap-1 rounded-lg">
                                 <MdOutlineTextsms />
                                 <p>Text</p>
                             </button>
-                            <button onClick={() => handleActionButton('Video')} type="button" className="bg-[#F8FAFC] border-2 border-[#E9E9E9] w-[30%] py-1.5 flex flex-col items-center gap-1 rounded-lg">
+                            <button onClick={() => handleActionButton('Video')} type="button" className="bg-[#F8FAFC] cursor-pointer hover:bg-gray-200 border-2 border-[#E9E9E9] w-[30%] py-1.5 flex flex-col items-center gap-1 rounded-lg">
                                 <IoVideocamOutline />
                                 <p>Video</p>
                             </button>

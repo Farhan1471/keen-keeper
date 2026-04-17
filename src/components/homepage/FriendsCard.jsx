@@ -41,7 +41,7 @@ const FriendsCard = () => {
                                         <div className="card-body text-center">
                                             <img src={friend.picture} alt="" className="w-24 rounded-full mx-auto" />
                                             <p className="font-semibold text-xl">{friend.name}</p>
-                                            <p className="text-[#64748B]">{friend.days_since_contact}d ago</p>
+                                            <p className="text-[#64748B] text-xs">{friend.days_since_contact}d ago</p>
 
                                             <div className="flex flex-wrap justify-center gap-1">
                                                 {friend.tags.map((tag, index) => (
@@ -49,7 +49,7 @@ const FriendsCard = () => {
                                                 ))}
                                             </div>
                                             
-                                            <div className="badge mx-auto rounded-full text-white" style={{backgroundColor: statusColors[friend.status]}}>{friend.status}</div>
+                                            <div className="badge mx-auto rounded-full text-xs text-white" style={{backgroundColor: statusColors[friend.status]}}>{friend.status}</div>
                                         </div>
                                     </div>
                                 </Link>

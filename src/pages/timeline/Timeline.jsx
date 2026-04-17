@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
 import { CalledFriendContext } from "../../context/CalledFriendContext";
-import { FiPhoneCall } from "react-icons/fi";
+import { FcCallback } from "react-icons/fc";
 import { MdOutlineTextsms } from "react-icons/md";
-import { IoVideocamOutline } from "react-icons/io5";
+import { FcVideoCall } from "react-icons/fc";
 
 const Timeline = () =>{
 
@@ -10,9 +10,9 @@ const Timeline = () =>{
     console.log(calledFriend, "calledFriend in timeline");
 
     const actionIcons = {
-        "Call": <FiPhoneCall />,
+        "Call": <FcCallback />,
         "Text": <MdOutlineTextsms />,
-        "Video": <IoVideocamOutline />
+        "Video": <FcVideoCall />
     }
 
     return(
@@ -31,11 +31,11 @@ const Timeline = () =>{
                     <option>Video</option>
                 </select>
                 {calledFriend.map((friend, index) => (
-                    <div key={index} className="card w-full bg-base-100 mt-4 sm:*:mx-2 border-2 border-[#E9E9E9] p-4">
+                    <div key={index} className="card w-full bg-base-100 mt-4 sm:mx-2 border-2 border-[#E9E9E9] p-4">
                         <div className="flex items-center gap-4">
-                            <p>{actionIcons[friend.actionType]}</p>
+                            <p className="text-2xl">{actionIcons[friend.actionType]}</p>
                             <div>
-                                <p>{friend.actionType} with {friend.name}</p>
+                                <p><b>{friend.actionType}</b> with {friend.name}</p>
                                 <p>{new Date().toLocaleDateString()}</p>
                             </div>
                         </div>

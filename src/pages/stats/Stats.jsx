@@ -16,7 +16,7 @@ const Stats = () =>{
         <div className="max-w-7xl mx-auto mt-6">
             <h3 className="font-bold text-4xl sm:text-left text-center">Friendship Analytics</h3>
             <div className=" my-5 shadow p-5 rounded-md border border-slate-300 container mx-auto">
-                <h2 className="font-semibold mb-8 text-center">By Interaction Type</h2>
+                <h2 className="font-semibold mb-8 text-left">By Interaction Type</h2>
                 <PieChart
                     style={{
                     width: "100%",
