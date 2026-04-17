@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import useFriendsData from "../../hooks/useFriendsData";
 import { Link } from "react-router";
+import { HashLoader } from "react-spinners";
 
 const FriendsCard = () => {
 
@@ -30,8 +31,8 @@ const FriendsCard = () => {
         <div>
             <h3 className="font-semibold text-2xl ml-76">Your Friends</h3>
 
-            {loading? <h2>Loading...</h2> : <div className="flex justify-center">
-                <div className="grid grid-cols-1 md:*:grid-cols-2 lg:grid-cols-4 gap-6 mt-6">
+            {loading? <div className="flex justify-center items-center"><HashLoader color="#244D3F"/></div> : <div className="flex justify-center">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-6">
                     {
                         friends.map((friend, individual) =>{
                             return(
@@ -40,7 +41,7 @@ const FriendsCard = () => {
                                         <div className="card-body text-center">
                                             <img src={friend.picture} alt="" className="w-24 rounded-full mx-auto" />
                                             <p className="font-semibold text-xl">{friend.name}</p>
-                                            <p className="text-[#64748B]">{friend.days_since_contact} d ago</p>
+                                            <p className="text-[#64748B]">{friend.days_since_contact}d ago</p>
 
                                             <div className="flex flex-wrap justify-center gap-1">
                                                 {friend.tags.map((tag, index) => (
@@ -48,7 +49,7 @@ const FriendsCard = () => {
                                                 ))}
                                             </div>
                                             
-                                            <div className="badge mx-auto text-white" style={{backgroundColor: statusColors[friend.status]}}>{friend.status}</div>
+                                            <div className="badge mx-auto rounded-full text-white" style={{backgroundColor: statusColors[friend.status]}}>{friend.status}</div>
                                         </div>
                                     </div>
                                 </Link>

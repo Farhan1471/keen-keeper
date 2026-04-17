@@ -9,6 +9,7 @@ import { MdOutlineTextsms } from "react-icons/md";
 import { IoVideocamOutline } from "react-icons/io5";
 import { CalledFriendContext } from "../../context/CalledFriendContext";
 import { toast } from "react-toastify";
+import { HashLoader } from "react-spinners";
 
 
 const FriendDetails = () => {
@@ -28,7 +29,7 @@ const FriendDetails = () => {
 
 
     if (loading || !expectedFriend) {
-        return null;
+        return <div className="flex justify-center items-center mt-4"><HashLoader color="#244D3F"/></div>;
     }
 
     const handleActionButton = (actionType) => {

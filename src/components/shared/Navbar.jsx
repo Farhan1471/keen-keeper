@@ -8,9 +8,9 @@ import { ImStatsDots } from "react-icons/im";
 const Navbar = () =>{
     return(
         <nav className="shadow">
-            <div className="flex justify-between items-center gap-4 bg-white py-4 px-4 sm:px-6 lg:px-8 container mx-auto">
-                <img src={logoImg} alt="" />
-                <ul className="flex justify-between items-center gap-4 text-[#64748B] font-semibold">
+            <div className="flex flex-col items-center gap-3 bg-white py-4 px-4 sm:px-6 lg:px-8 container mx-auto sm:flex-row sm:justify-between">
+                <img src={logoImg} alt="KeenKeeper" />
+                <ul className="flex justify-center items-center gap-4 text-[#64748B] font-semibold w-full sm:w-auto">
                     <li>
                         <NavLink to={"/"} className={({isActive}) => 
                             isActive ? "flex items-center gap-1 bg-[#244D3F] text-white px-3 py-2 rounded" : "flex items-center gap-1"}>
