@@ -15,7 +15,7 @@ const useFriendsData = () => {
                 setTimeout(() => {
                     showFriends(data);
                     setLoading(false);
-                },2000)
+                },1500)
             };
             fetchData();
         }, [])
